@@ -2,7 +2,6 @@ package com.paulos3r.screenmetch.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.paulos3r.screenmetch.model.DadosSerie;
 
 public class ConverteDados implements IConverteDados{
 
