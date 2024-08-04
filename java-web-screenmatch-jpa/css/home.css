@@ -1,16 +1,27 @@
+.palheta_color {
+    color: #131842;
+    color: #e68369;
+    color: #ecceae;
+    color: #fbf6e2;
+    color: rgba(19, 24, 66);
+    color: rgb(230, 131, 105);
+    color: rgb(236, 206, 174);
+    color: rgb(251, 246, 226);
+}
+
 body {
     background: linear-gradient(180.61deg,
-            #000000 25.16%,
-            #04254f 80%,
-            #409ecd 100%);
+    #e68369 25.16%,
+    #ecceae 80%,
+    #fbf6e2 100%);
     background-repeat: no-repeat;
     background-size: cover;
-
-
+    background-color: #131842;
 }
 
 h1 {
     display: none;
+    color:#ecceae;
 }
 
 .hidden {
@@ -19,8 +30,8 @@ h1 {
 
 select,
 option {
-    background-color: black;
-    color: white;
+    background-color: #131842;
+    color: #ecceae;
     font-size: 24px;
     padding: 0 1em;
 }
@@ -32,7 +43,7 @@ select {
 
 
 h2 {
-    color: white;
+    color: #131842;
 }
 
 main {
@@ -56,7 +67,7 @@ main {
 }
 
 .material-symbols-outlined {
-    color: white;
+    color:#131842;
     font-size: 48px
 }
 
