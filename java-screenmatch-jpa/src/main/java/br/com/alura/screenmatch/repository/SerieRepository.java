@@ -18,7 +18,10 @@ public interface SerieRepository extends JpaRepository<Serie, Long> {
   List<Serie> findTop5ByOrderByAvaliacaoDesc();
 
   List<Serie> findByGenero(Categoria categoria);
-  //List<Serie> findByTotalTemporadasLessThanEqualAndAvaliacaoGreaterThanEqual(int totalTemporadas, double avaliacao);
+
+  List<Serie> findByTotalTemporadasLessThanEqualAndAvaliacaoGreaterThanEqual(int totalTemporadas, double avaliacao);
+
+  List<Serie> findTop5ByOrderByEpisodiosDataLancamentoDesc();
 
   /**
    * jpql = Java Persistence Query Language
@@ -49,4 +52,10 @@ public interface SerieRepository extends JpaRepository<Serie, Long> {
                   "where s1_0 = :serie and year( e1_0.dataLancamento )>= :anoLancamento"
   )
   List<Episodio> episodioPorSerieEAno(Serie serie, int anoLancamento);
+
+  @Query("SELECT s FROM Serie s " +
+          "JOIN s.episodios e " +
+          "GROUP BY s " +
+          "ORDER BY MAX(e.dataLancamento) DESC LIMIT 5")
+  List<Serie> encontrarEpisodiosMaisRecentes();  // retorna a top 5 também devido a um ajuste no findTop5ByOrderByEpisodiosDataLancamentoDesc();
 }
