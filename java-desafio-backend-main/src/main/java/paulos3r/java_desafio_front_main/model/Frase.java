@@ -9,6 +9,7 @@ public class Frase {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String titulo;
+  private String frase;
   private String personagem;
   private String poster;
 
@@ -28,6 +29,14 @@ public class Frase {
     this.titulo = titulo;
   }
 
+  public String getFrase() {
+    return frase;
+  }
+
+  public void setFrase(String frase) {
+    this.frase = frase;
+  }
+
   public String getPersonagem() {
     return personagem;
   }
@@ -42,14 +51,5 @@ public class Frase {
 
   public void setPoster(String poster) {
     this.poster = poster;
-  }
-
-  @Override
-  public String toString() {
-    return
-            "id=" + id +
-            ", titulo='" + titulo + '\'' +
-            ", personagem='" + personagem + '\'' +
-            ", poster='" + poster + '\'';
   }
 }
